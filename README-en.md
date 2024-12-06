@@ -1,8 +1,5 @@
 # High Go
-
-このライブラリは画像を、**ESPCN_x4.pb** で高画質にするライブラリです。
-
-[English](README-en.md)
+This library enhances image resolution using ESPCN_x4.pb, allowing for high-quality outputs.
 
 ## Usage
 ```Go
@@ -10,17 +7,16 @@ package main
 
 import (
     "fmt"
-    "os/exec"
     "github.com/kaedeek/HighGo"
 )
 
 func main() {
-    // モデルファイルのパス
+    // Path to the model file
     modelPath := "model/ESPCN_x4.pb"
     inputImage := "input.jpg"
     outputImage := "output.jpg"
 
-    // HighGoライブラリを使用して超解像処理を実行
+    // Perform super-resolution using the HighGo library
     err := HighGo.SuperResolve(inputImage, modelPath, outputImage)
     if err != nil {
         fmt.Println("Error in super resolution:", err)
@@ -31,5 +27,6 @@ func main() {
 }
 ```
 
+
 ## Authors
-- Owner and Developer: [kaedeek](https://github.com/kaedeek)
+Owner and Developer: [kaedeek](https://github.com/kaedeek)
